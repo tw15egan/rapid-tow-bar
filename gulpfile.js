@@ -7,6 +7,7 @@ var maps        = require('gulp-sourcemaps');
 var htmlmin     = require('gulp-htmlmin');
 var rename      = require("gulp-rename");
 var imagemin    = require('gulp-imagemin');
+var ghPages     = require('gulp-gh-pages');
 
 gulp.task('html', function() {
   return gulp.src('./app/index.html')
@@ -31,6 +32,11 @@ gulp.task('sass', function() {
       .pipe(maps.write('.'))
       .pipe(gulp.dest('./dist/css'))
       .pipe(browserSync.reload({stream: true}))
+})
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages())
 })
 
 gulp.task('serve', ['build'], function() {
