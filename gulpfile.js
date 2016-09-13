@@ -1,21 +1,32 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create()
-var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var nano        = require('gulp-cssnano');
-var maps        = require('gulp-sourcemaps');
-var htmlmin     = require('gulp-htmlmin');
-var rename      = require("gulp-rename");
-var imagemin    = require('gulp-imagemin');
-var ghPages     = require('gulp-gh-pages');
-var babel       = require("gulp-babel");
-var uglify      = require('gulp-uglify');
+const gulp        = require('gulp');
+const browserSync = require('browser-sync').create()
+const sass        = require('gulp-sass');
+const prefix      = require('gulp-autoprefixer');
+const nano        = require('gulp-cssnano');
+const maps        = require('gulp-sourcemaps');
+const htmlmin     = require('gulp-htmlmin');
+const rename      = require("gulp-rename");
+const imagemin    = require('gulp-imagemin');
+const ghPages     = require('gulp-gh-pages');
+const babel       = require("gulp-babel");
+const notify      = require('gulp-notify');
+const uglify      = require('gulp-uglify');
+const plumber     = require('gulp-plumber');
+
+function onError(error) {
+  notify({
+    title: 'Error',
+    message: error.messageOriginal,
+  }).write(error);
+
+  this.emit('end');
+}
 
 gulp.task('html', function() {
   return gulp.src('./app/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.stream());
 })
 
 gulp.task('assets', function() {
@@ -32,23 +43,21 @@ gulp.task('copy', function() {
 gulp.task('sass', function() {
     return gulp.src('./app/scss/**/*.scss')
       .pipe(maps.init())
+      .pipe(plumber({ errorHandler: onError }))
       .pipe(sass())
       .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
       .pipe(nano())
       .pipe(rename('styles.min.css'))
       .pipe(maps.write('.'))
       .pipe(gulp.dest('./dist/css'))
-      .pipe(browserSync.reload({stream: true}))
+      .pipe(browserSync.stream());
 })
-
-var gulp = require("gulp");
-
 
 gulp.task('js', function () {
   return gulp.src('./app/js/app.js')
     .pipe(babel())
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'));
+    // .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('deploy', function() {
@@ -57,10 +66,10 @@ gulp.task('deploy', function() {
 })
 
 gulp.task('serve', ['build'], function() {
-  
   browserSync.init({
+    open: false,
     server: {
-        baseDir: './dist'
+        baseDir: './dist',
     }
   })
   gulp.watch('./app/scss/**/*.scss', ['sass'])
