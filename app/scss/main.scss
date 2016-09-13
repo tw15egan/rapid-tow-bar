@@ -1,7 +1,18 @@
 @import './reset';
+@import './components/header';
+@import './components/hero';
+
+* {
+  box-sizing: border-box;
+}
 
 html, 
 body {
   height: 100%;
   width: 100%;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
 }
