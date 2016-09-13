@@ -49,12 +49,12 @@ rules:
   force-pseudo-nesting: 1
 
   # Name Formats
-  class-name-format: 1
+  class-name-format: 0
   function-name-format: 1
   id-name-format: 0
   mixin-name-format: 1
   placeholder-name-format: 1
-  variable-name-format: 1
+  variable-name-format: 0
 
   # Style Guide
   attribute-quotes: 1
@@ -64,10 +64,10 @@ rules:
   clean-import-paths: 1
   empty-args: 1
   hex-length: 1
-  hex-notation: 1
+  hex-notation: 0
   indentation: 1
   leading-zero: 1
-  nesting-depth: 1
+  nesting-depth: 0
   property-sort-order: 1
   pseudo-element: 1
   quotes: 1
