@@ -1,5 +1,6 @@
 @import './helpers/reset';
 @import './helpers/variables';
+@import './components/about';
 @import './components/header';
 @import './components/hero';
 
@@ -22,10 +23,12 @@ body {
 
   section {
     min-height: 100vh;
+    padding: 1rem;
   }
-  
-  p {
-    
+
+  img {
+    height: 100%;
+    width: 100%;
   }
 
   a {
