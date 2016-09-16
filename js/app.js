@@ -1,9 +1,5 @@
-const header = document.querySelector('.header');
+const toggle = document.querySelector('.header__toggle');
 
-window.addEventListener('scroll', e => {
-  if (window.scrollY > 99) {
-    header.classList.add('active');
-  } else {
-    header.classList.remove('active');
-  }
+toggle.addEventListener('click', function () {
+  toggle.classList.toggle('active');
 });
