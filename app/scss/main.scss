@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  transition: 250ms all;
 }
 
 html,
@@ -22,7 +23,6 @@ body {
   max-width: 1000px;
 
   section {
-    min-height: 100vh;
     padding: 1rem;
   }
 

@@ -1,24 +1,36 @@
 .header {
   align-items: center;
   background-color: $white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  display: flex;
-  justify-content: space-between;
-  min-height: 60px;
-  padding: 1.25rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  height: 70px;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 10;
-  
+  z-index: 2;
+
+  section {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
 
   &__title {
+    display: inline-block;
     font-weight: 300;
+    width: 100%;
   }
 
   &__nav {
+    align-items: center;
     display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
 
     li {
       margin: 0 .5rem;
@@ -30,6 +42,117 @@
       &:first-child {
         margin-left: 0;
       }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__toggle {
+    align-items: center;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (max-width: 600px) {
+      display: flex;
+    }
+
+    &--icon {
+      cursor: pointer;
+      padding: 1rem;
+    }
+
+    &--menu {
+      background-color: $white;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .24);
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      top: 70px;
+      transform: translateY(-10%);
+      visibility: hidden;
+      width: 100%;
+
+      li {
+        border-bottom: 1px solid $color__primary;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &--link {
+      align-items: center;
+      display: flex;
+      padding: 1.5rem 1rem;
+      width: 100%;
+
+      &:hover {
+        background-color: darken($white, 10%);
+      }
+    }
+
+    @media (max-width: 600px) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__icon {
+    background-color: $black;
+    height: 3px;
+    position: relative;
+    width: 2rem;
+
+    &::before,
+    &::after {
+      background-color: $black;
+      content: '';
+      display: block;
+      height: 3px;
+      position: absolute;
+      transition: 250ms all;
+      width: 2rem;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+}
+
+.header__toggle.active {
+  .header__toggle--menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .header__icon {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(-225deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
     }
   }
 }
