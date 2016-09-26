@@ -3,6 +3,7 @@
 @import './components/about';
 @import './components/header';
 @import './components/hero';
+@import './components/product';
 
 * {
   box-sizing: border-box;
@@ -23,6 +24,7 @@ body {
   max-width: 1000px;
 
   section {
+    margin: 2rem 0;
     padding: 1rem;
   }
 

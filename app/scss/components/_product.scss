@@ -1,0 +1,17 @@
+.product {
+  &__container {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    margin: 0 0 3rem;
+  }
+
+  &__desc {
+    flex: 4;
+    padding: 0 2rem 0 0;
+  }
+
+  &__image {
+    flex: 4;
+  }
+}
