@@ -1,8 +1,15 @@
 .hero {
+  align-items: flex-end;
+  display: flex;
   height: auto;
+  margin-bottom: $spacing*3;
   margin-top: 69px;
-  padding-top: 0;
+  padding: 0;
   width: 100%;
+
+  @include bp('650px') {
+    padding: 1rem;
+  }
 
   video {
     height: auto;

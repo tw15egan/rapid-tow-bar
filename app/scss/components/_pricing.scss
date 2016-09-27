@@ -1,0 +1,17 @@
+.pricing {
+  background-color: $black;
+  color: $white;
+
+  a {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-size: 1.25rem;
+  }
+  
+  svg {
+    max-height: 2rem;
+    max-width: 2rem;
+    margin-right: $spacing;
+  }
+}
