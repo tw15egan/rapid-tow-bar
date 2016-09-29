@@ -1,0 +1,9 @@
+.footer {
+  align-items: flex-end;
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 80px;
+  padding: $spacing;
+}

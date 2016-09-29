@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  transition: 250ms all;
+  transition: 285ms all;
 }
 
 html,
@@ -30,6 +30,7 @@ body {
   }
 
   p {
+    font-size: 21px;
     line-height: 1.5;
   }
 
@@ -75,3 +76,5 @@ body {
 @import './components/hero';
 @import './components/product';
 @import './components/pricing';
+@import './components/contact';
+@import './components/footer';

@@ -8,10 +8,10 @@
     display: flex;
     font-size: 1.25rem;
   }
-  
+
   svg {
+    margin-right: $spacing;
     max-height: 2rem;
     max-width: 2rem;
-    margin-right: $spacing;
   }
 }

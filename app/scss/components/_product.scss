@@ -10,7 +10,7 @@
     &--wp {
       align-items: center;
       flex-direction: row;
-      justify-content: space-around;
+      // justify-content: space-around;
       min-height: 20rem;
     }
   }
@@ -32,15 +32,15 @@
   }
 
   &__title {
-    display: inline-block;
-    padding: 1rem;
     border-bottom: 2px solid $black;
     border-top: 2px solid $black;
+    display: inline-block;
+    padding: 1rem;
   }
 
   &__text {
-    // max-width: 400px;
-    margin-top: $spacing*2;
+    margin: $spacing*2 0;
+    padding: 0 $spacing;
   }
 }
 
@@ -48,20 +48,8 @@
   .product {
     &__desc {
       display: flex;
-      // align-items: flex-start;
       justify-content: center;
       flex-direction: column;
-      // min-height: 20rem;
-    }
-  }
-}
-
-.product__container--wp {
-
-  .product {
-    &__desc {
-      // display: flex;
-      // align-items: center;
     }
   }
 }
