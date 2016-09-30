@@ -39,8 +39,13 @@ body {
     }
   }
 
+  small {
+    @include type-setting(-1);
+  }
+
   p {
     @include type-setting(0);
+    letter-spacing: .25px;
   }
 
   h1 {
