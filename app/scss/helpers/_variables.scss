@@ -1,11 +1,35 @@
-$black: #333;
+$black: rgba(47, 49, 56, 1);
+// $white: rgba(245, 247, 250, 1);
 $white: #fdfdfd;
 
-$spacing-xs: .25rem;
-$spacing-sm: .75rem;
-$spacing: 1rem;
-$spacing-lg: 1.5rem;
+
+
 
 $color__primary: #A71930;
 
-$font__primary: 'Lato', sans-serif;
+$font__primary: 'Open Sans', sans-serif;
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.45;
+
+$spacing-xs: $base-line-height * .25;
+$spacing-sm: $base-line-height * .75;
+$spacing: $base-line-height;
+$spacing-lg: $base-line-height * 2;
+
+$type-scale: (
+  - 1: .707em,
+  0: 1em,
+  1: 1.414em,
+  2: 1.999em,
+  3: 2.827em,
+  4: 3.998em
+);
+
+$line-height: (
+  - 1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height * 2,
+  2: $base-line-height * 2,
+  3: $base-line-height * 2,
+  4: $base-line-height * 2
+)

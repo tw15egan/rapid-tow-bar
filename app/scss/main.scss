@@ -9,29 +9,21 @@
 
 html,
 body {
+  background-color: $white;
   height: 100%;
   width: 100%;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
+  color: $black;
   font-family: $font__primary;
-  line-height: 1.45;
   margin: 0 auto;
   max-width: 1000px;
-
-  section {
-    padding: 1rem;
-  }
 
   img {
     height: 100%;
     width: 100%;
-  }
-
-  p {
-    font-size: 21px;
-    line-height: 1.5;
   }
 
   a {
@@ -43,31 +35,28 @@ body {
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1.2;
+  p {
+    @include type-setting(0);
   }
 
   h1 {
-    font-size: 2.441rem;
+    @include type-setting(4);
   }
 
   h2 {
-    font-size: 1.953rem;
+    @include type-setting(4);
   }
 
   h3 {
-    font-size: 1.563rem;
+    @include type-setting(3);
   }
 
   h4 {
-    font-size: 1.25rem;
+    @include type-setting(2);
   }
 
-  small {
-    font-size: .8rem;
+  h5 {
+    @include type-setting(1);
   }
 }
 
