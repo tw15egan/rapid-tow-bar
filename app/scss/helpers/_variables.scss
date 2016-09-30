@@ -8,7 +8,7 @@ $white: #fdfdfd;
 $color__primary: #A71930;
 
 $font__primary: 'Open Sans', sans-serif;
-$base-font-size: 1em;
+$base-font-size: 1.125rem;
 $base-line-height: $base-font-size * 1.45;
 
 $spacing-xs: $base-line-height * .25;
@@ -17,12 +17,12 @@ $spacing: $base-line-height;
 $spacing-lg: $base-line-height * 2;
 
 $type-scale: (
-  - 1: .707em,
-  0: 1em,
-  1: 1.414em,
-  2: 1.999em,
-  3: 2.827em,
-  4: 3.998em
+  - 1: .707rem,
+  0: 1.125rem,
+  1: 1.414rem,
+  2: 1.999rem,
+  3: 2.827rem,
+  4: 3.998rem
 );
 
 $line-height: (

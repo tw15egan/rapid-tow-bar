@@ -26,6 +26,10 @@ body {
     width: 100%;
   }
 
+  section {
+    padding: $spacing-lg $spacing;
+  }
+
   a {
     color: $color__primary;
     text-decoration: none;
@@ -53,6 +57,9 @@ body {
 
   h4 {
     @include type-setting(2);
+    display: inline;
+    font-weight: 900;
+    margin-bottom: $spacing;
   }
 
   h5 {

@@ -1,17 +1,25 @@
 .pricing {
   background-color: $black;
   color: $white;
+  margin-top: $spacing-lg;
 
   a {
     align-items: center;
     color: $white;
     display: flex;
-    font-size: 1.25rem;
+  }
+
+  &__link {
+    font-size: type-scale(1);
+
+    @include bp('650px') {
+      font-size: type-scale(2);
+    }
   }
 
   svg {
     margin-right: $spacing;
-    max-height: 2rem;
-    max-width: 2rem;
+    max-height: type-scale(3);
+    max-width: type-scale(3);
   }
 }
