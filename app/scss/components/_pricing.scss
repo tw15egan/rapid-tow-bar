@@ -2,6 +2,7 @@
   background-color: $black;
   color: $white;
   margin-top: $spacing-lg;
+  padding: $spacing;
 
   a {
     align-items: center;
@@ -13,11 +14,12 @@
     font-size: type-scale(1);
 
     @include bp('650px') {
-      font-size: type-scale(2);
+      font-size: type-scale(1);
     }
   }
 
   svg {
+    fill: $white;
     margin-right: $spacing;
     max-height: type-scale(3);
     max-width: type-scale(3);

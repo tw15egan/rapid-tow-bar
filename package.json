@@ -30,7 +30,11 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^2.0.0",
-    "sass-lint": "^1.9.1"
+    "path": "^0.12.7",
+    "sass-lint": "^1.9.1",
+    "svgxuse": "^1.1.22"
   }
 }

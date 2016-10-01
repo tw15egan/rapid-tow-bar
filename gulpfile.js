@@ -12,6 +12,9 @@ const babel       = require("gulp-babel");
 const notify      = require('gulp-notify');
 const uglify      = require('gulp-uglify');
 const plumber     = require('gulp-plumber');
+const svgstore    = require('gulp-svgstore');
+const svgmin      = require('gulp-svgmin');
+const path        = require('path');
 
 function onError(error) {
   notify({
@@ -24,21 +27,40 @@ function onError(error) {
 
 gulp.task('html', function() {
   return gulp.src('./app/index.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream());
-})
+});
 
 gulp.task('assets', function() {
-  gulp.src('./app/img/*')
+  gulp.src('./app/img/*.jpg')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img'))
-})
+    .pipe(gulp.dest('./dist/img'));
+});
 
 gulp.task('copy', function() {
-  gulp.src('./app/assets/*')
+  gulp.src(['./app/assets/*', './node_modules/svgxuse/svgxuse.min.js'])
   .pipe(gulp.dest('./dist/assets'))
 })
+
+gulp.task('svgstore', function () {
+    return gulp
+        .src('./app/img/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('./dist/img'));
+});
 
 gulp.task('sass', function() {
     return gulp.src('./app/scss/**/*.scss')
@@ -78,4 +100,4 @@ gulp.task('serve', ['build'], function() {
   gulp.watch('./app/*.html', ['html']).on('change', browserSync.reload)
 })
 
-gulp.task('build', ['copy', 'assets', 'sass', 'js', 'html'])
+gulp.task('build', ['copy', 'assets', 'svgstore', 'sass', 'js', 'html'])
