@@ -1,8 +1,8 @@
 .footer {
   align-items: flex-end;
-  background-color: $gray;
-  color: $black;
+  background-color: $color__primary;
+  color: $color__white;
   display: flex;
   justify-content: flex-end;
-  padding: $spacing;
+  padding: $spacing-sm $spacing;
 }

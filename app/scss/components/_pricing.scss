@@ -1,10 +1,9 @@
 .pricing {
-  background-color: $black;
+  background-color: $color__primary;
   color: $white;
-  // padding: $spacing;
 
   &:hover {
-    background-color: lighten($black, 5%);
+    background-color: lighten($color__primary, 5%);
   }
 
   a {
@@ -25,8 +24,8 @@
 
   svg {
     fill: $white;
+    margin-left: .5rem;
     max-height: 2.45rem;
     max-width: 2.45rem;
-    margin-left: .5rem;
   }
 }

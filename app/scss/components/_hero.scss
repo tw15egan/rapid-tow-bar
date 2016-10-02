@@ -7,13 +7,13 @@
   width: 100%;
 
   @include bp('650px') {
-    padding: 1rem;
     margin-top: 90px;
+    padding: 1rem;
   }
 
   video {
+    border-bottom: 1px solid $color__primary;
     height: auto;
     width: 100%;
-    border-bottom: 1px solid #ddd;
   }
 }

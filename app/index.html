@@ -10,7 +10,9 @@
 <body>
   <header class="header">
     <section>
-      <h4 class="header__title">Rapid Tow Bar</h4>
+      <a class="header__title" href="#">
+        <h4>Rapid Tow Bar</h4>
+      </a>
 
       <ul class="header__nav">
         <li>
@@ -88,7 +90,7 @@
   </section>
   <section class="contact" id="contact">
     <h4 class="contact__title">Contact Us</h4>
-    <form class="contact__form">
+    <form class="contact__form" action="https://formspree.io/jagsrule2010@gmail.com" method="POST">
       <fieldset class="form__name">
         <label for="name" class="form__label">Name</label>
         <input type="text" name="name" class="form__input" />
@@ -105,7 +107,7 @@
       </fieldset>
 
       <fieldset class="form__submit">
-        <button class="form__button">
+        <button class="form__button" type="submit">
           <svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="./img/sprite.svg#envelope"></use></svg>
           Send Message
         </button>

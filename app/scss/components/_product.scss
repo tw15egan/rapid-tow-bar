@@ -1,17 +1,15 @@
 .product {
-  // background-color: #f0f0f0;
-  // margin-top: $spacing-sm;
-  padding: $spacing-lg $spacing 0;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  padding: $spacing-lg $spacing 0;
 
   &__title {
-    font-weight: 700;
+    border-top: 1px solid $color__primary;
     font-size: 1.75rem;
-    padding: $spacing 0 0;
+    font-weight: 700;
     margin-bottom: $spacing-sm;
-    border-top: 1px solid #ddd;
+    padding: $spacing 0 0;
     width: 100%;
   }
 
@@ -20,23 +18,22 @@
   }
 
   &__image {
+    border-bottom: 1px solid $color__primary;
+    filter: saturate(80%);
+    margin-bottom: $spacing-lg;
     margin-top: $spacing-xs;
     padding-bottom: $spacing-lg;
-    margin-bottom: $spacing-lg;
-    filter: saturate(80%);
-    border-bottom: 1px solid #ddd;
   }
 }
 
 .pdf {
-  background-color: $black;
-  color: $white;
+  background-color: $color__primary;
   border-bottom: 1px solid $white;
   padding-bottom: 1.2rem;
   padding-top: 1.2rem;
 
   &:hover {
-    background-color: lighten($black, 5%);
+    background-color: lighten($color__primary, 5%);
   }
 }
 
@@ -47,16 +44,16 @@
 
   &__title {
     color: $white;
-    margin: 0;
-    margin-left: $spacing;
     font-size: type-scale(1);
     font-weight: 700;
+    margin: 0;
+    margin-left: $spacing;
   }
 
   &__image {
     fill: $white;
     height: 3rem;
-    width: 3rem;
     margin-left: .1rem;
+    width: 3rem;
   }
 }
