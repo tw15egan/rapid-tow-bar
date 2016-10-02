@@ -1,17 +1,22 @@
 .pricing {
   background-color: $black;
   color: $white;
-  margin-top: $spacing-lg;
-  padding: $spacing;
+  // padding: $spacing;
+
+  &:hover {
+    background-color: lighten($black, 5%);
+  }
 
   a {
     align-items: center;
     color: $white;
     display: flex;
+    font-weight: 700;
   }
 
   &__link {
     font-size: type-scale(1);
+    margin-left: $spacing;
 
     @include bp('650px') {
       font-size: type-scale(1);
@@ -20,8 +25,8 @@
 
   svg {
     fill: $white;
-    margin-right: $spacing;
-    max-height: type-scale(3);
-    max-width: type-scale(3);
+    max-height: 2.45rem;
+    max-width: 2.45rem;
+    margin-left: .5rem;
   }
 }

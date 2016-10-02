@@ -1,9 +1,19 @@
 .about {
   display: flex;
   flex-direction: column;
+  padding: $spacing $spacing $spacing-xs;
+  margin-top: $spacing;
 
   &__photo {
     border-radius: 50%;
+  }
+
+  &__title {
+    border-top: 1px solid #ddd;
+    padding-top: $spacing;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: $spacing-sm;
   }
 }
 
@@ -13,19 +23,20 @@
   flex-direction: column;
   justify-content: flex-start;
   min-height: 300px;
-  padding: $spacing-lg $spacing;
+  padding: $spacing-sm 0 $spacing-lg;
 
-  &:first-child {
-    padding-top: 0;
-  }
   // &:nth-child(odd) {
   //   flex-direction: row-reverse;
   //   text-align: right;
-  //   
+  //
   //   img {
   //     margin: 0 0 0 $spacing*2;
   //   }
   // }
+
+  &:last-child {
+    border-bottom: 1px solid #ddd;
+  }
 
   &__image {
     fill: $black;
@@ -34,6 +45,9 @@
     width: 8rem;
 
     &--headshot {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 50%;
       background-color: transparent;
       filter: saturate(75%);
       padding: 0;
