@@ -1,25 +1,15 @@
 .pricing {
-  background-color: $color__primary;
-  color: $white;
-
-  &:hover {
-    background-color: lighten($color__primary, 5%);
-  }
+  border-top: 1px solid $color__primary;
+  display: flex;
+  flex-direction: column;
 
   a {
-    align-items: center;
-    color: $white;
-    display: flex;
+    border-bottom: 1px solid $color__primary;
     font-weight: 700;
   }
 
   &__link {
     font-size: type-scale(1);
-    margin-left: $spacing;
-
-    @include bp('650px') {
-      font-size: type-scale(1);
-    }
   }
 
   svg {

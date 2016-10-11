@@ -17,7 +17,10 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   color: $black;
+  display: flex;
+  flex-direction: column;
   font-family: $font__primary;
+  height: auto;
   margin: 0 auto;
   max-width: 1000px;
 
@@ -27,7 +30,7 @@ body {
   }
 
   section {
-    padding: $spacing;
+    padding: $spacing-lg $spacing;
   }
 
   a {
@@ -62,8 +65,8 @@ body {
 
   h4 {
     @include type-setting(2);
-    display: inline;
-    font-weight: 900;
+    display: inline-block;
+    font-weight: 700;
     margin-bottom: $spacing;
   }
 

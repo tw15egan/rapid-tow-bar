@@ -1,83 +1,43 @@
 .about {
+  border-top: 1px solid $color__primary;
   display: flex;
   flex-direction: column;
   margin-top: $spacing;
-  padding: $spacing $spacing $spacing-xs;
 
   &__photo {
     border-radius: 50%;
   }
 
-  &__title {
-    border-top: 1px solid $color__primary;
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: $spacing-sm;
-    padding-top: $spacing;
-
-    @media all and (min-width: 650px) {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.desc {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 300px;
-  padding: $spacing-sm 0 $spacing-lg;
-
-  @media all and (min-width: 650px) {
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 100px;
-    padding-bottom: $spacing;
-    width: 100%;
-  }
-
-  &:first-child {
-
-    @media all and (min-width: 650px) {
-      padding-bottom: 0;
-    }
-  }
-
-  &:last-child {
-    border-bottom: 1px solid $color__primary;
-
-    @media all and (min-width: 650px) {
-      padding-bottom: $spacing-lg;
-    }
-  }
-
   &__image {
-    fill: $black;
-    height: 8rem;
-    margin-bottom: $spacing;
-    width: 8rem;
+    background-color: transparent;
+    border-radius: 50%;
+    filter: saturate(75%);
+    height: 11rem;
+    margin: 0 auto;
+    padding: 0;
+    width: 11rem;
 
     @media all and (min-width: 650px) {
-      margin-bottom: 0;
-      margin-right: $spacing-sm;
-      padding: $spacing-sm;
-      width: 22rem;
+      height: 14rem;
+      width: 14rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: $spacing 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    &--headshot {
-      background-color: transparent;
-      border-radius: 50%;
-      filter: saturate(75%);
-      height: 11rem;
-      padding: 0;
-      width: 11rem;
-
-      @media all and (min-width: 650px) {
-        height: 9rem;
-        padding: $spacing-sm;
-        width: 9rem;
-      }
+    span {
+      -webkit-font-smoothing: antialiased;
+      font-weight: 700;
     }
   }
 }
