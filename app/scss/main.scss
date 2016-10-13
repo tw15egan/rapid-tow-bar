@@ -40,6 +40,10 @@ body {
     &:visited {
       color: $color__primary;
     }
+    
+    &:hover {
+      color: lighten($color__primary, 20%);
+    }
   }
 
   small {

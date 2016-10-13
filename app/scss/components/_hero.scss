@@ -1,15 +1,14 @@
 .hero {
+  @include bp('650px') {
+    margin-top: 90px;
+    padding: 1rem;
+  }
   align-items: flex-end;
   display: flex;
   height: auto;
   margin-top: 71px;
   padding: 0;
   width: 100%;
-
-  @include bp('650px') {
-    margin-top: 90px;
-    padding: 1rem;
-  }
 
   video {
     height: auto;
