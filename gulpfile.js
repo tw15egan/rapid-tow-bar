@@ -39,7 +39,7 @@ gulp.task('assets', function() {
 });
 
 gulp.task('copy', function() {
-  gulp.src(['./app/assets/*', './node_modules/svgxuse/svgxuse.min.js'])
+  gulp.src('./app/assets/*')
   .pipe(gulp.dest('./dist/assets'))
 })
 
