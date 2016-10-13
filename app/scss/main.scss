@@ -77,6 +77,12 @@ body {
   h5 {
     @include type-setting(1);
   }
+
+  #about,
+  #pricing,
+  #contact {
+    padding-top: 70px;
+  }
 }
 
 @import './components/about';
