@@ -31,7 +31,13 @@ $box-shadow-2: rgba(0, 0, 0, .24);
     width: 100%;
 
     h4 {
-      @include type-setting(1);
+      @include type-setting(-1);
+      @include bp('233px') {
+        @include type-setting(0);
+      }
+      @include bp('266px') {
+        @include type-setting(1);
+      }
       @include bp('333px') {
         @include type-setting(2);
       }
