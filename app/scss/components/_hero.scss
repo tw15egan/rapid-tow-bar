@@ -1,12 +1,12 @@
 .hero {
-  @include bp('650px') {
+  @include bp('600px') {
     margin-top: 90px;
-    padding: 1rem;
+    padding: $spacing;
   }
   align-items: flex-end;
   display: flex;
   height: auto;
-  margin-top: 71px;
+  margin-top: 70px;
   padding: 0;
   width: 100%;
 

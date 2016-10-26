@@ -8,113 +8,115 @@
   <link href="./css/styles.min.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
-    <section>
-      <a class="header__title" href="#">
-        <h4>Rapid Tow Bar</h4>
-      </a>
+  <section class="main-content">
+    <header class="header">
+      <section>
+        <a class="header__title" href="#">
+          <h4>Rapid Tow Bar</h4>
+        </a>
 
-      <ul class="header__nav">
-        <li>
-          <a href="#pricing" class="header__link">Pricing</a>
-        </li>
-        <li>
-          <a href="#about" class="header__link">About Us</a>
-        </li>
-        <li>
-          <a href="#contact" class="header__link">Contact</a>
-        </li>
-      </ul>
-
-      <div class="header__toggle">
-        <div class="header__toggle--icon">
-          <div class="header__icon"></div>
-        </div>
-        <ul class="header__toggle--menu">
+        <ul class="header__nav">
           <li>
-            <a href="#pricing" class="header__toggle--link">Pricing</a>
+            <a href="#pricing" class="header__link">Pricing</a>
           </li>
           <li>
-            <a href="#about" class="header__toggle--link">About Us</a>
+            <a href="#about" class="header__link">About Us</a>
           </li>
           <li>
-            <a href="#contact" class="header__toggle--link">Contact</a>
+            <a href="#contact" class="header__link">Contact</a>
           </li>
         </ul>
+
+        <div class="header__toggle">
+          <div class="header__toggle--icon">
+            <div class="header__icon"></div>
+          </div>
+          <ul class="header__toggle--menu">
+            <li>
+              <a href="#pricing" class="header__toggle--link">Pricing</a>
+            </li>
+            <li>
+              <a href="#about" class="header__toggle--link">About Us</a>
+            </li>
+            <li>
+              <a href="#contact" class="header__toggle--link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <section class="hero">
+      <video controls>
+        <source src="./assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <section class="product">
+      <h4 class="product__title">The Rapid Tow Bar</h4>
+      <div class="product__container">
+        <p class="product__text">A patented invention that reduces push times for commercial operations. You can license this tow bar accessory to save thousands of dollars on your commercial airline operations.</p>
+        <img class="product__image" src="./img/productrendering.jpg" />
       </div>
     </section>
-  </header>
-  <section class="hero">
-    <video controls>
-      <source src="./assets/video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-  <section class="product">
-    <h4 class="product__title">The Rapid Tow Bar</h4>
-    <div class="product__container">
-      <p class="product__text">A patented invention that reduces push times for commercial operations. You can license this tow bar accessory to save thousands of dollars on your commercial airline operations.</p>
-      <img class="product__image" src="./img/productrendering.jpg" />
-    </div>
-  </section>
-  <section class="product">
-    <h4 class="product__title">White Paper</h4>
-    <div class="product__container">
-      <p class="product__text product__text--short">This White Paper explains the origin of the invention, the existing conditions for using tow bars, and the benefits of this patented idea for future tow bars.</p>
-      <a class="product__link" download="whitepaper.pdf" href="./assets/whitepaper.pdf" title="whitepaper-download">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="./img/sprite.svg#pdf"></use></svg>
-      </a>
-    </div>
-  
-  </section>
-  <section class="product">
-    <h4 class="product__title">Patent</h4>
-    <div class="product__container">
-      <p class="product__text product__text--short">Download the patent for details on this invention.</p>
-      <a class="product__link" download="whitepaper.pdf" href="./assets/whitepaper.pdf" title="whitepaper-download">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="./img/sprite.svg#pdf"></use></svg>
-      </a>
-    </div>
-  </section>
-  <section class="pricing" id="pricing">
-    <h4 class="pricing__title">Pricing</h4>
-      <p class="pricing__link"><a href="mailto:dan@rapidtowbar.com">Email us</a> for a quote</p>
-  </section>
-  <section class="about" id="about">
-    <h4 class="about__title">About Us</h4>
-    <img class="about__image" src="./img/headshot.jpg" />
-    <div class="about__desc">
-      <p><span>Daniel J. McElroy</span> is a United States Air Force veteran, who flew C-141s in the Vietnam War.</p>
-      <p>He was a professional pilot for both Western Airlines and Delta Airlines before he retired in 2001. He currently has more than 20,000 hours in the air, and adds to it every day.</p>
-      <p>Dan is an ATP, CFI A&I Multi, and an A&P Mechanic. He's type Rated in B-727, B-777, MD-88, and Eclipse 500, and has flown over 67 types of airplanes.</p>
-      <p>He is well positioned to invent improvements to tow bars and other airplane support equipment, and patents these ideas for the use of airlines and other pilots.</p>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <h4 class="contact__title">Contact Us</h4>
-    <form class="contact__form" action="https://formspree.io/dan@rapidtowbar.com" method="POST">
-      <fieldset class="form__name">
-        <label for="name" class="form__label">Name</label>
-        <input type="text" name="name" class="form__input" />
-      </fieldset>
+    <section class="product">
+      <h4 class="product__title">White Paper</h4>
+      <div class="product__container">
+        <p class="product__text product__text--short">This White Paper explains the origin of the invention, the existing conditions for using tow bars, and the benefits of this patented idea for future tow bars.</p>
+        <a class="product__link" download="whitepaper.pdf" href="./assets/whitepaper.pdf" title="whitepaper-download">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="./img/sprite.svg#pdf"></use></svg>
+        </a>
+      </div>
+    
+    </section>
+    <section class="product">
+      <h4 class="product__title">Patent</h4>
+      <div class="product__container">
+        <p class="product__text product__text--short">Download the patent for details on this invention.</p>
+        <a class="product__link" download="whitepaper.pdf" href="./assets/whitepaper.pdf" title="whitepaper-download">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="./img/sprite.svg#pdf"></use></svg>
+        </a>
+      </div>
+    </section>
+    <section class="pricing" id="pricing">
+      <h4 class="pricing__title">Pricing</h4>
+        <p class="pricing__link"><a href="mailto:dan@rapidtowbar.com">Email us</a> for a quote</p>
+    </section>
+    <section class="about" id="about">
+      <h4 class="about__title">About Us</h4>
+      <img class="about__image" src="./img/headshot.jpg" />
+      <div class="about__desc">
+        <p><span>Daniel J. McElroy</span> is a United States Air Force veteran, who flew C-141s in the Vietnam War.</p>
+        <p>He was a professional pilot for both Western Airlines and Delta Airlines before he retired in 2001. He currently has more than 20,000 hours in the air, and adds to it every day.</p>
+        <p>Dan is an ATP, CFI A&I Multi, and an A&P Mechanic. He's type Rated in B-727, B-777, MD-88, and Eclipse 500, and has flown over 67 types of airplanes.</p>
+        <p>He is well positioned to invent improvements to tow bars and other airplane support equipment, and patents these ideas for the use of airlines and other pilots.</p>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h4 class="contact__title">Contact Us</h4>
+      <form class="contact__form" action="https://formspree.io/dan@rapidtowbar.com" method="POST">
+        <fieldset class="form__name">
+          <label for="name" class="form__label">Name</label>
+          <input type="text" name="name" class="form__input" />
+        </fieldset>
 
-      <fieldset class="form__email">
-        <label for="email" class="form__label">Email</label>
-        <input type="email" name="email" class="form__input" />
-      </fieldset>
+        <fieldset class="form__email">
+          <label for="email" class="form__label">Email</label>
+          <input type="email" name="email" class="form__input" />
+        </fieldset>
 
-      <fieldset class="form__message">
-        <label for="message" class="form__label">Message</label>
-        <textarea name="message" class="form__input"></textarea>
-      </fieldset>
+        <fieldset class="form__message">
+          <label for="message" class="form__label">Message</label>
+          <textarea name="message" class="form__input"></textarea>
+        </fieldset>
 
-      <fieldset class="form__submit">
-        <button class="form__button" type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="./img/sprite.svg#envelope"></use></svg>
-          Send Message
-        </button>
-      </fieldset>
-    </form>
+        <fieldset class="form__submit">
+          <button class="form__button" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg"><use xlink:href="./img/sprite.svg#envelope"></use></svg>
+            Send Message
+          </button>
+        </fieldset>
+      </form>
+    </section>
   </section>
   <footer class="footer">
     <small class="footer__copy">&copy;2016</small>
