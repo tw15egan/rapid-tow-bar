@@ -17,6 +17,7 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   color: $black;
+  background-color: $color__primary;
   display: flex;
   flex-direction: column;
   font-family: $font__primary;
@@ -29,6 +30,7 @@ body {
   }
 
   section {
+    background-color: $white;
     margin: 0 auto;
     max-width: 1000px;
     padding: $spacing-lg $spacing;
@@ -91,6 +93,10 @@ body {
   #pricing,
   #contact {
     padding-top: 70px;
+  }
+
+  .main-content {
+    margin-bottom: $spacing-lg;
   }
 }
 
